@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Prompt Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff4c4c;
+    }
+
+    .prompt-box {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .prompt-heading {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+
+    .prompt-text {
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #ff4c4c;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .copy-btn:hover {
+      background-color: #ff1e1e;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AI Prompts – Click to Copy</h1>
+
+  <div class="prompt-box">
+    <div class="prompt-heading">Hyper-Realistic Graphic Design</div>
+    <button class="copy-btn" onclick="copyText(this)">Copy</button>
+    <div class="prompt-text">
+CREATE A HYPER-DETAILED GRAPHIC DESIGN FEATURING A STRIKING PORTRAIT OF A YOUNG MAN WITH THE SAME FACE AS UPLOADED WITH A CONFIDENT DEMEANOUR. HIS HEAD IS ADORNED WITH VOLUMINOUS, ADDING TEXTURE AND DEPTH TO THE COMPOSITION. THE PORTRAIT IS RENDERED IN A HIGH-CONTRAST BLACK-AND-WHITE STYLE, STANDING OUT AGAINST THE MINIMALIST BACKGROUND. HIS EXPRESSION IS CALM YET DETERMINED, WITH ONE EYE PARTIALLY OBSCURED BY A BOLD RED RECTANGULAR OVERLAY THAT ADDS A MODERN, ARTISTIC FLAIR.
+
+THE BACKGROUND IS A SMOOTH, TEXTURED GREY CANVAS. OVERLAID VERTICALLY ALONG THE LEFT SIDE OF THE IMAGE, THE WORD "PAUL SOMENDRA" IS REPEATED IN LARGE, BOLD BLACK LETTERS WITH A SLIGHT TRANSPARENCY EFFECT. INTERSPERSED ARE ICONIC DESIGN ELEMENTS: A PROMINENT NIKE LOGO IN RED, A STYLIZED RED "S", AND A VERTICAL RED LINE. TO THE RIGHT, A RED GEOMETRIC FRAME SURROUNDS THE OBSCURED EYE.
+
+AT THE BOTTOM RIGHT, THE PHRASE "WORK SMART NOT HARD" IS WRITTEN IN BOLD RED CAPITALS, WITH "SMART" IN SMALLER CURSIVE SCRIPT BENEATH IT. THE BOTTOM LEFT CORNER FEATURES "#PAUL" IN RED.
+
+THE YOUNG MAN'S ATTIRE INCLUDES A BLACK LEATHER JACKET WITH AN OPEN COLLAR. THE LIGHTING IS DRAMATIC, HIGHLIGHTING TEXTURES OF HAIR AND JACKET, WHILE RED ACCENTS POP AGAINST THE GRAYSCALE.
+
+PHOTOREALISTIC. SHALLOW DEPTH OF FIELD. DSLR QUALITY. HASSELBLAD X2D 100C. 4:5 ASPECT RATIO. MAKE IT 8K ULTRA REALISTIC, HYPER DETAILED.
+    </div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="prompt-heading">Add Heading</div>
+    <button class="copy-btn" onclick="copyText(this)">Copy</button>
+    <div class="prompt-text">
+<!-- Add your second prompt here -->
+    </div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="prompt-heading">Add Heading</div>
+    <button class="copy-btn" onclick="copyText(this)">Copy</button>
+    <div class="prompt-text">
+<!-- Add your third prompt here -->
+    </div>
+  </div>
+
+  <div class="prompt-box">
+    <div class="prompt-heading">Add Heading</div>
+    <button class="copy-btn" onclick="copyText(this)">Copy</button>
+    <div class="prompt-text">
+<!-- Add your fourth prompt here -->
+    </div>
+  </div>
+
+  <script>
+    function copyText(button) {
+      const text = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        button.innerText = "Copied!";
+        setTimeout(() => {
+          button.innerText = "Copy";
+        }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
